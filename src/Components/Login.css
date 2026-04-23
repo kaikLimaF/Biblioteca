@@ -1,0 +1,191 @@
+/* Estilos Gerais */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte sans-serif similar */
+  height: 100%;
+}
+
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f2f5; /* Fundo cinza claro */
+}
+
+/* Card de Login */
+.login-card {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px; /* Largura máxima do card */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Cabeçalho */
+.login-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.logo-icon {
+  font-size: 40px;
+}
+
+.logo-text {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+}
+
+.logo-text.sub {
+  font-weight: normal;
+}
+
+.login-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+/* Formulário */
+.login-form {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f7f8f9;
+  margin-bottom: 15px;
+  overflow: hidden; /* Garante que os filhos não saiam da borda */
+}
+
+.input-icon {
+  padding: 12px 15px;
+  color: #888;
+  border-right: 1px solid #ddd;
+}
+
+.form-input {
+  border: none;
+  background-color: transparent;
+  padding: 12px 15px;
+  flex: 1; /* Preenche o espaço restante */
+  font-size: 16px;
+  color: #333;
+}
+
+.form-input:focus {
+  outline: none; /* Remove a borda de foco padrão */
+}
+
+/* Link Forgot Password */
+.forgot-password-container {
+  display: flex;
+  justify-content: flex-end; /* Alinha o link à direita */
+  margin-bottom: 20px;
+}
+
+.forgot-password {
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Botão de Login */
+.btn-login {
+  width: 100%;
+  padding: 15px;
+  background-color: #f2c94c; /* Cor amarela similar */
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+  background-color: #e2b73f; /* Amarelo um pouco mais escuro no hover */
+}
+
+/* Rodapé */
+.login-footer {
+  text-align: center;
+  width: 100%;
+}
+
+.signup-text {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.signup-link {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+/* Login Rápido */
+.quick-login p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-button {
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 50%; /* Torna o botão circular */
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 0;
+  overflow: hidden; /* Garante que a imagem fique dentro do círculo */
+}
+
+.social-button img {
+  width: 25px; /* Ajusta o tamanho do ícone */
+  height: 25px;
+}
+
+.social-button:hover {
+  background-color: #f7f8f9;
+}

@@ -1,0 +1,237 @@
+/* Fundo da página inteira */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #d8dee9; /* Cinza claro do fundo da tela */
+  height: 100vh;
+}
+
+.dashboard-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+/* O "App" em si - a janela branca arredondada */
+.dashboard-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f8fafc; /* Quase branco/cinza muito claro */
+  overflow: hidden; /* Mantém tudo dentro dos cantos arredondados */
+}
+
+/* --- BARRA LATERAL --- */
+.sidebar {
+  width: 250px;
+  background-color: #f8fafc;
+  padding: 30px 0;
+  border-right: 1px solid #e2e8f0;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  margin-bottom: 50px;
+}
+
+.logo-icon {
+  font-size: 32px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-title {
+  font-weight: 900;
+  font-size: 18px;
+  color: #1e293b;
+  line-height: 1;
+}
+
+.logo-subtitle {
+  font-weight: 500;
+  font-size: 16px;
+  color: #1e293b;
+}
+
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu li {
+  padding: 15px 30px;
+  font-size: 16px;
+  color: #475569;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-menu li:hover {
+  color: #0f172a;
+}
+
+/* Estilo do item selecionado (ex: Academic) */
+.nav-menu li.active {
+  color: #1e293b;
+  font-weight: bold;
+}
+
+.nav-menu li.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10%;
+  height: 80%;
+  width: 4px;
+  background-color: #1e293b; /* A barrinha indicadora à esquerda */
+  border-radius: 0 4px 4px 0;
+}
+
+/* --- CONTEÚDO PRINCIPAL --- */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8fafc;
+}
+
+/* Cabeçalho */
+.top-header {
+  height: 80px;
+  background-color: #1e293b; /* Azul escuro */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #334155; /* Azul mais claro para o input */
+  border-radius: 20px;
+  padding: 8px 20px;
+  width: 400px;
+}
+
+.search-icon {
+  color: #94a3b8;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.search-bar input {
+  background: transparent;
+  border: none;
+  color: white;
+  width: 100%;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-bar input::placeholder {
+  color: #94a3b8;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Bolinha vermelha de notificação */
+.notification .badge {
+  position: absolute;
+  top: 0;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  background-color: #ef4444; /* Vermelho */
+  border-radius: 50%;
+  border: 2px solid #1e293b;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #cbd5e1; /* Círculo cinza claro para o avatar */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Área do Banner e Livros */
+.content-area {
+  padding: 30px 40px;
+  flex: 1;
+  overflow-y: auto; /* Permite rolar caso adicionemos conteúdo depois */
+}
+
+.featured-banner {
+  background-color: #2e4057; /* Azul escuro do banner */
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  color: white;
+  height: 120px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  z-index: 2; /* Mantém o texto acima das ilustrações de fundo */
+}
+
+.banner-icon {
+  font-size: 36px;
+}
+
+.featured-banner h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+/* Opcional: Adicionando formas geométricas simples com CSS para simular a arte do banner */
+.featured-banner::after {
+  content: "";
+  position: absolute;
+  right: -50px;
+  top: -50px;
+  width: 250px;
+  height: 250px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.empty-books-area {
+  /* Esta área está vazia e sem altura forçada,
+     pronta para receber a grade de livros no futuro! */
+  margin-top: 30px;
+}

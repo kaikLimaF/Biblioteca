@@ -1,56 +1,87 @@
 import "./Books.css";
 import { useState } from "react";
-
-// --- Dados de exemplo (Mock Data) ---
-// Colocamos os livros aqui para usar no lugar da API
+import harryPotterImg from '../assets/livro.png';
+import senhoDoAneisImg from '../assets/livro9.png';
+import harryPotterImg2 from '../assets/livro2.png';
+import harryPotterImg3 from '../assets/livro3.png';
+import harryPotterImg4 from '../assets/livro4.png';
+import harryPotterImg5 from '../assets/livro5.png';
+import harryPotterImg6 from '../assets/livro6.png';
+import harryPotterImg7 from '../assets/livro7.png';
+import georgeOrwellImg2 from '../assets/1984.png';
+import pequenoPrincipeImg from '../assets/pequeno.png';
+import georgeOrwellImg from '../assets/livro8.png';
 const mockBooks = [
+  {
+    title: "Harry Potter e a Pedra Filosofal",
+    author: "J.K. Rowling",
+    image: harryPotterImg, 
+
+  },
+   {
+    title: "Harry Potter e a Pedra Filosofal",
+    author: "J.K. Rowling",
+    image: harryPotterImg2, 
+
+  },
+   {
+    title: "Harry Potter e a Pedra Filosofal",
+    author: "J.K. Rowling",
+    image: harryPotterImg3, 
+
+  },
+   {
+    title: "Harry Potter e a Pedra Filosofal",
+    author: "J.K. Rowling",
+    image: harryPotterImg4, 
+
+  },
+   {
+    title: "Harry Potter e a Pedra Filosofal",
+    author: "J.K. Rowling",
+    image: harryPotterImg5, 
+
+  },
+   {
+    title: "Harry Potter e a Pedra Filosofal",
+    author: "J.K. Rowling",
+    image: harryPotterImg6, 
+
+  },
+   {
+    title: "Harry Potter e a Pedra Filosofal",
+    author: "J.K. Rowling",
+    image: harryPotterImg7, 
+
+  },
   {
     title: "O Senhor dos Anéis",
     author: "J.R.R. Tolkien",
     image:
-      "https://upload.wikimedia.org/wikipedia/pt/thumb/c/c8/O_Senhor_dos_An%C3%A9is_-_A_Sociedade_do_Anel.jpg/250px-O_Senhor_dos_An%C3%A9is_-_A_Sociedade_do_Anel.jpg",
+    senhoDoAneisImg,
+  },
+ 
+   {
+    title: "A Revolução dos Bichos",
+    author: "George Orwell",
+    image:
+    georgeOrwellImg,
   },
   {
-    title: "Dom Quixote",
-    author: "Miguel de Cervantes",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/El_ingenioso_hidalgo_don_Quijote_de_la_Mancha.jpg/220px-El_ingenioso_hidalgo_don_Quijote_de_la_Mancha.jpg",
+    title: "O Pequeno Príncipe",
+    author: "Antoine de Saint-Exupéry",
+    image: 
+    pequenoPrincipeImg,
   },
   {
     title: "1984",
     author: "George Orwell",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/1984first.jpg/220px-1984first.jpg",
+    georgeOrwellImg2,
   },
-  {
-    title: "O Pequeno Príncipe",
-    author: "Antoine de Saint-Exupéry",
-    image: "https://upload.wikimedia.org/wikipedia/pt/a/a3/Le_Petit_Prince.jpg",
-  },
-  {
-    title: "A Revolução dos Bichos",
-    author: "George Orwell",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Animal_Farm_-_1st_edition.jpg/220px-Animal_Farm_-_1st_edition.jpg",
-  },
-  {
-    title: "Cem Anos de Solidão",
-    author: "Gabriel García Márquez",
-    image:
-      "https://upload.wikimedia.org/wikipedia/pt/thumb/e/e8/Cien_a%C3%B1os_de_soledad.jpg/200px-Cien_a%C3%B1os_de_soledad.jpg",
-  },
-  {
-    title: "O Apanhador no Campo de Centeio",
-    author: "J.D. Salinger",
-    image:
-      "https://upload.wikimedia.org/wikipedia/pt/thumb/c/ce/Apanhador_no_Campo_de_Centeio.jpg/230px-Apanhador_no_Campo_de_Centeio.jpg",
-  },
-  {
-    title: "Fahrenheit 451",
-    author: "Ray Bradbury",
-    image:
-      "https://upload.wikimedia.org/wikipedia/pt/thumb/9/98/Fahrenheit451.jpg/230px-Fahrenheit451.jpg",
-  },
+  
+ 
+
 ];
 
 const Books = () => {

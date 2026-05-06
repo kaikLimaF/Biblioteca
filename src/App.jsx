@@ -1,20 +1,47 @@
 // App.js
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import { useState } from "react";
-import Login from "../src/Components/Login";
-import Books from "../src/Components/Books";
+import Login from "./Components/Login";
+import Books from "./Components/Books";
+import BookDetail from "./Components/BookDetail";
 import "./App.css";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const handleLogin = () => {
+  const handleLoginSuccess = () => {
     setIsLoggedIn(true);
   };
 
   return (
-    <div className="App">
-      {isLoggedIn ? <Books /> : <Login onLoginSuccess={handleLogin} />}
-    </div>
+    <Router>
+      <Routes>
+        <Route
+          path="/login"
+          element={
+            isLoggedIn ? (
+              <Navigate to="/books" />
+            ) : (
+              <Login onLoginSuccess={handleLoginSuccess} />
+            )
+          }
+        />
+        <Route
+          path="/books"
+          element={isLoggedIn ? <Books /> : <Navigate to="/login" />}
+        />
+        <Route
+          path="/book/:id"
+          element={isLoggedIn ? <BookDetail /> : <Navigate to="/login" />}
+        />
+        <Route path="*" element={<Navigate to="/login" />} />
+      </Routes>
+    </Router>
   );
 }
 

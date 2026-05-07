@@ -1,4 +1,5 @@
 import "./Login.css";
+import { Link } from "react-router-dom";
 
 // Componente para um campo de entrada com ícone
 const InputField = ({ icon, type, placeholder }) => (
@@ -51,9 +52,9 @@ const LoginForm = ({ onLoginSuccess }) => {
         <div className="login-footer">
           <p className="signup-text">
             Don't have an account?{" "}
-            <a href="#" className="signup-link">
+            <Link to="/signup" className="signup-link">
               Sign Up
-            </a>
+            </Link>
           </p>
           <div className="quick-login">
             <p>Quick login with Google</p>

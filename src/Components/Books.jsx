@@ -1,11 +1,12 @@
 import "./Books.css";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { mockBooks } from "../data";
 
-const Books = () => {
+const Books = ({ setIsLoggedIn }) => {
   // Usamos um estado para controlar qual item do menu está ativo
   const [activeTab, setActiveTab] = useState("Fiction"); // Começar com uma categoria
+  const navigate = useNavigate();
 
   return (
     <div className="dashboard-wrapper">
@@ -47,6 +48,16 @@ const Books = () => {
             <div className="header-actions">
               <button className="icon-btn notification"></button>
               <div className="user-avatar"></div>
+              <button
+                className="btn-logout"
+                onClick={() => {
+                  setIsLoggedIn(false);
+                  navigate("/login");
+                }}
+                title="Sair"
+              >
+                Sair
+              </button>
             </div>
           </header>
 

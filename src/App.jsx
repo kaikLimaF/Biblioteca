@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import { useState } from "react";
 import Login from "./Components/Login";
+import SignUp from "./Components/SignUp";
 import Books from "./Components/Books";
 import BookDetail from "./Components/BookDetail";
 import "./App.css";
@@ -32,8 +33,24 @@ function App() {
           }
         />
         <Route
+          path="/signup"
+          element={
+            isLoggedIn ? (
+              <Navigate to="/books" />
+            ) : (
+              <SignUp onRegisterSuccess={handleLoginSuccess} />
+            )
+          }
+        />
+        <Route
           path="/books"
-          element={isLoggedIn ? <Books /> : <Navigate to="/login" />}
+          element={
+            isLoggedIn ? (
+              <Books setIsLoggedIn={setIsLoggedIn} />
+            ) : (
+              <Navigate to="/login" />
+            )
+          }
         />
         <Route
           path="/book/:id"

@@ -73,7 +73,6 @@ const Books = ({ setIsLoggedIn }) => {
             </div>
             <div className="books-section">
               <div className="books-grid">
-                {/* Como não há mais carregamento, podemos mapear os livros diretamente */}
                 {mockBooks.map((book) => (
                   <div className="book-card" key={book.id}>
                     <img
@@ -82,6 +81,15 @@ const Books = ({ setIsLoggedIn }) => {
                     />
                     <h3>{book.title}</h3>
                     <p>{book.author}</p>
+
+                    {/* Nova linha exibindo o valor formatado em Reais */}
+                    <p className="book-price">
+                      R${" "}
+                      {book.price
+                        ? book.price.toFixed(2).replace(".", ",")
+                        : "0,00"}
+                    </p>
+
                     <Link to={`/book/${book.id}`}>
                       <button>Rent</button>
                     </Link>
